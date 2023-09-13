@@ -209,12 +209,12 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 		if(HealthComponent->IsDead())
 		{
 			bDeath = true;
-			ASimpleShooterGameModeBase* GameMode = GetWorld()->GetAuthGameMode<ASimpleShooterGameModeBase>();
+			/*ASimpleShooterGameModeBase* GameMode = GetWorld()->GetAuthGameMode<ASimpleShooterGameModeBase>();
 			if(GameMode !=nullptr)
 			{
 				GameMode->PawnKilled(this);
 			}
-
+			*/
 			DetachFromControllerPendingDestroy();
 			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}

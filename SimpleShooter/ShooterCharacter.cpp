@@ -54,7 +54,7 @@ void AShooterCharacter::BeginPlay()
 	}
 
 	Shield = GetWorld()->SpawnActor<ABaseShield>(ShieldClass);
-	Shield->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("ShieldSpawn"));
+	Shield->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("Holo_Interface"));
 	Shield->SetOwner(this);
 
 	Shield->SetShieldOff();

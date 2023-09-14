@@ -264,6 +264,10 @@ void AShooterCharacter::SpawnInventory()
 	WeaponsInventory[1]->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("FX_backpack"));
 	WeaponsInventory[1]->SetOwner(this);
 
+	FVector OriginalRifleLocation(3.f, -13.f, 19.f);
+	FRotator OriginalRifleRotation(3.f, 0.f, 85.f);
+	WeaponsInventory[1]->GetSkeletalMesh()->SetRelativeLocationAndRotation(OriginalRifleLocation, OriginalRifleRotation);
+
 	Gun = WeaponsInventory[0];
 
 }
@@ -278,10 +282,10 @@ void AShooterCharacter::SetPrimaryWeapon()
 	SwitchingWeapon.Broadcast();
 
 	AimingRifle = false;
-	
-	FVector OriginalRifleLocation(3, -13, 19);
-	FRotator OriginalRifleRotation(3, 0, 85);
 
+	FVector OriginalRifleLocation(3.f, -13.f, 19.f);
+	FRotator OriginalRifleRotation(3.f, 0.f, 85.f);
+	
 	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform , TEXT("FX_backpack"));
 	Gun->GetSkeletalMesh()->SetRelativeLocationAndRotation(OriginalRifleLocation, OriginalRifleRotation);
 

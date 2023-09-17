@@ -503,6 +503,12 @@ float AShooterCharacter::GetShieldCharge()
 
 }
 
+bool AShooterCharacter::GetbDoubleClick()
+{
+	return bDoubleClick;
+
+}
+
 ABaseShield* AShooterCharacter::GetCharacterShield()
 {
 	if(Shield != nullptr)

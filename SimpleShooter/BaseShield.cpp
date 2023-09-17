@@ -158,3 +158,9 @@ USkeletalMeshComponent* ABaseShield::GetMesh()
 	return nullptr;
 	
 }
+
+float ABaseShield::GetShieldMaxLife()
+{	
+	return MaxLifeTime;
+
+}

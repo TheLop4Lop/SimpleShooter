@@ -81,6 +81,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	class ABaseShield* GetCharacterShield();
 
+	UFUNCTION(BlueprintPure)
+	bool GetbDoubleClick();
+
 	void SpawnInventory();
 	void FallingDamage();
 

@@ -40,6 +40,9 @@ public:
 	
 	float GetBattery();
 
+	UFUNCTION(BlueprintPure)
+	float GetShieldMaxLife();
+
 	UPROPERTY(BlueprintReadOnly)
 	float DelayShield;
 
@@ -52,12 +55,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Actor Properties", meta = (AllowPrivateAcces))
 	USceneComponent* Root;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Actor Timelife", meta = (AllowPrivateAccess))
-	float LifeTime = 20;
-
 	UPROPERTY(EditAnywhere, Category = "Actor Timelife", meta = (AllowPrivateAccess))
 	float MaxLifeTime = 20;
 
+	float LifeTime = 20;
 	float DamageRate = 0.1f;
 
 	class USkeletalMeshComponent* SkeletalMesh;

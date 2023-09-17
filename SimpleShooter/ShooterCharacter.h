@@ -43,6 +43,8 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 	UPROPERTY(BlueprintReadWrite)
 	bool bGettingDamage;
+	
+	UPROPERTY(BlueprintReadWrite)
 	bool bDeath;
 
 	UFUNCTION(BlueprintPure)

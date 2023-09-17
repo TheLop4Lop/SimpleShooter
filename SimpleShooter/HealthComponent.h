@@ -32,6 +32,7 @@ public:
 	UFUNCTION(BlueprintPure)
 	float GetHealth();
 
+	UFUNCTION(BlueprintPure)
 	float GetMaxHealth();
 	void ResetHealth();
 
